@@ -1,4 +1,4 @@
-package domain.mapper.entity;
+package spring.boot.desafio.rafadevgg.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

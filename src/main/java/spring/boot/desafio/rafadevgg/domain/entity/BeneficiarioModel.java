@@ -1,4 +1,4 @@
-package domain.mapper.entity;
+package spring.boot.desafio.rafadevgg.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "TB_Beneficiario")
@@ -30,12 +32,7 @@ public class BeneficiarioModel {
     @Column(name = "dataNascimento")
     private LocalDate dataNascimento;
 
-    @OneToMany
-    @JoinColumn(name = "dataInclusao", referencedColumnName = "dataInclusao")
-    private DocumentoModel diDocumento;
-
-    @OneToMany
-    @JoinColumn(name = "dataAtualizacao", referencedColumnName = "dataAtualizacao")
-    private DocumentoModel dtDocumento;
+    @OneToMany(mappedBy = "Beneficiario", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<DocumentoModel> documentos = new ArrayList<>();
 
 }
