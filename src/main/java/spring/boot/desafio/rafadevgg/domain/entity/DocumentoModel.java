@@ -1,12 +1,11 @@
-package spring.boot.desafio.rafadevgg.entity;
+package domain.mapper.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.cglib.core.Local;
-import spring.boot.desafio.rafadevgg.entity.enums.TipoDocumento;
+import domain.mapper.entity.enums.TipoDocumento;
 
 import java.time.LocalDate;
 
@@ -35,4 +34,5 @@ public class DocumentoModel {
 
     @Column(name = "dataAtualização")
     private LocalDate dataAtualizacao;
+
 }

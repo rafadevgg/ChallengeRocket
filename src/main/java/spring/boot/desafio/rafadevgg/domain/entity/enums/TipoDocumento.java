@@ -1,4 +1,4 @@
-package spring.boot.desafio.rafadevgg.entity.enums;
+package domain.mapper.entity.enums;
 
 public enum TipoDocumento {
 

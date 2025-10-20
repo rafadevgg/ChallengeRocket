@@ -1,4 +1,4 @@
-package spring.boot.desafio.rafadevgg.entity;
+package domain.mapper.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -37,4 +37,5 @@ public class BeneficiarioModel {
     @OneToMany
     @JoinColumn(name = "dataAtualizacao", referencedColumnName = "dataAtualizacao")
     private DocumentoModel dtDocumento;
+
 }
